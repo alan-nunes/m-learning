@@ -16,6 +16,13 @@ O **M-Learning** é um aplicativo de ensino personalizado, com foco na adaptaç�
 - **CSS3**: Estilos e responsividade.
 - **JavaScript**: Funcionalidades interativas, como navegação entre telas e criação de turmas.
 
+## Deploy
+
+ A aplicação desenvolvida foi implantada na plataforma Vercel e está disponível no seguinte endereço:
+
+ - [https://m-learning-gilt.vercel.app/](https://m-learning-gilt.vercel.app/)
+
+
 ## Como Rodar o Projeto Localmente
 
 1. Clone este repositório para o seu computador:
