@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>M-Learning</title>
+</head>
+<body>
+
+  <!-- Tela de Splash -->
+  <div class="screen splash-screen">
+    <h1 class="logo">M-Learning</h1>
+  </div>
+
+  <!-- Tela de Login -->
+  <div class="screen login-screen">
+    <h2>M-Learning</h2>
+    <input type="email" placeholder="E-mail">
+    <input type="password" placeholder="Senha">
+    <button class="btn" onclick="showScreen('role-screen')">Acessar</button>
+    <p>Não tem uma conta? <a href="#" onclick="showScreen('register-screen')">Criar conta</a></p>
+  </div>
+
+  <!-- Tela de Cadastro -->
+  <div class="screen register-screen">
+    <h2>M-Learning</h2>
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="E-mail">
+    <input type="password" placeholder="Senha">
+    <button class="btn" onclick="showScreen('role-screen')">Inscrever-se</button>
+  </div>
+
+  <!-- Tela de Seleção de Usuário -->
+  <div class="screen role-screen">
+    <h2>Você é:</h2>
+    <button class="btn" onclick="showScreen('teacher-home-screen')">Professor(a)</button>
+    <!--<button class="btn">Estudante</button> -->
+    <button class="btn" onclick="showScreen('student-home-screen')">Estudante</button>
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+
+  <!-- Tela Principal do Professor -->
+  <div class="screen teacher-home-screen">
+    <h2>Minhas Turmas</h2>
+    <button class="btn" onclick="showScreen('create-class-screen')">Criar Turma</button>
+    <button class="btn" onclick="showScreen('list-classes-screen')">Ver Minhas Turmas</button>
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+
+  <!-- Tela de Criação de Turma -->
+  <div class="screen create-class-screen">
+    <h2>Criar Turma</h2>
+    <button class="btn">Português</button>
+    <button class="btn">Matemática</button>
+    <input type="text" placeholder="Nome da turma">
+    <input type="text" placeholder="Código da turma">
+    <button class="btn" onclick="showScreen('teacher-home-screen')">Salvar</button>
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+
+   <!-- Tela Principal do Estudante -->
+   <div class="screen student-home-screen">
+    <h2>Meus Conteúdos</h2>
+    <button class="btn" onclick="showScreen('content-screen')">Ver Conteúdo</button>
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+
+  <!-- Tela de Conteúdo do Estudante -->
+  <div class="screen content-screen">
+    <h2>Reino da Fração</h2>
+    <p>Conteúdo interativo sobre frações.</p>
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+  
+  <!-- Tela de Listagem de Turmas -->
+  <div class="screen list-classes-screen">
+    <h2>Minhas Turmas</h2>
+    <div class="class-item">Português</div>
+    <div class="class-item">Matemática</div>
+    <!--<button class="btn" onclick="showScreen('teacher-home-screen')">Voltar</button> -->
+    <button class="btn" onclick="goBack()">Voltar</button>
+  </div>
+
+  <!-- Tela de Conteúdos -->
+  <div class="screen contents-screen">
+    <h2>Reino da Fração</h2>
+    <div class="content-card">3/4</div>
+    <div class="content-card">6/4</div>
+    <div class="content-card">9/4</div>
+    <button class="btn" onclick="showScreen('teacher-home-screen')">Voltar</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
